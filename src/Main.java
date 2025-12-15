@@ -46,6 +46,7 @@ public class Main {
 
             if (!HashUtil.verifyPassword(enteredPassword, salt, storedHash)) {
                 System.out.println("Access denied!");
+                scanner.close();
                 return; // stop program
             }
 
