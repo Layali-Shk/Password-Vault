@@ -6,7 +6,7 @@ import java.util.Base64;                // store hash as string
 
 public class HashUtil{
 public static byte[] g
-enerateSalt() throws Exception{
+generateSalt() throws Exception{
     SecureRandom random = new SecureRandom();
     byte[] salt = new byte[16];
     random.nextBytes(salt);
@@ -15,8 +15,8 @@ enerateSalt() throws Exception{
 
 public static String hashPassword(String password, byte[] salt) throws Exception{
     int iterations = 65536;
-    int keyLenght = 256;
-    KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, iterations, keyLengths);
+    int keyLength = 256;
+    KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, iterations, keyLength);
     SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
     byte[] hash = factory.generateSecret(spec).getEncoded();
     return Base64.getEncoder().encodeToString(hash);
