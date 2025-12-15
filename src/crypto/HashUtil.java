@@ -5,7 +5,8 @@ import javax.crypto.spec.PBEKeySpec;    // PBKDF2 specification
 import java.util.Base64;                // store hash as string
 
 public class HashUtil{
-public static byte[] generateSalt() throws Exception{
+public static byte[] g
+enerateSalt() throws Exception{
     SecureRandom random = new SecureRandom();
     byte[] salt = new byte[16];
     random.nextBytes(salt);
