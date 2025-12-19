@@ -66,7 +66,7 @@ javac -d bin src/Main.java src/crypto/HashUtil.java src/model/Entry.java src/vau
 ```
 3. **Run the program**
 ```bash
-java -cp bim Main
+java -cp bin Main
 ```
 4. **Follow the prompts**
 - Create a master password if running for the first time.
